@@ -7,6 +7,6 @@ TypeScript, no framework. The page reads a live list from the shared Supabase te
 
 | App | Folder | Production | Preview gate |
 |---|---|---|---|
-| Bittern | `apps/bittern-dpp` | _not deployed yet_ | no |
-| Eyot | `apps/eyot-hdt` | _not deployed yet_ | no |
-| Knapweed | `apps/knapweed-qxg` | _not deployed yet_ | no |
+| Bittern | `apps/bittern-dpp` | https://fescue-ness-1qpa-bittern-dpp.netlify.app | no |
+| Eyot | `apps/eyot-hdt` | https://fescue-ness-1qpa-eyot-hdt.netlify.app | no |
+| Knapweed | `apps/knapweed-qxg` | https://fescue-ness-1qpa-knapweed-qxg.netlify.app | no |

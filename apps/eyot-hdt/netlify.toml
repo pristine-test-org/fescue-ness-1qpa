@@ -1,4 +1,4 @@
-# Netlify builds this folder and serves dist/. One page, so no redirects.
+# Netlify builds this folder and serves dist/. One page, so no redirects. Base: this app folder.
 [build]
   command = "npm run build"
   publish = "dist"
