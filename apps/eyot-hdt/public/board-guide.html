@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reading the Eyot board</title>
+    <style>
+      body { margin: 0; font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; --accent: #3b4bc8; }
+      header, section { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      header { display: flex; justify-content: space-between; align-items: center; }
+      .mark { font-weight: 700; color: var(--accent); }
+      /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+      header a { color: var(--accent); font-size: 10px; }
+      /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+      h1 {
+        font-size: clamp(2rem, 6vw, 3.25rem);
+        margin: 2rem 0 1rem;
+        background: linear-gradient(90deg, #3b4bc8, #e0457b);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      /* Intentional, for Impeccable's test drive: low-contrast grey text on a light background. */
+      .lede { color: #c4c4c0; font-size: 1.15rem; line-height: 1.5; }
+      table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+      th, td { text-align: left; padding: 0.5rem 0.25rem; border-bottom: 1px solid #e5e5e0; }
+      .meter { background: #e5e5e0; border-radius: 0.5rem; height: 0.75rem; margin: 1rem 0; }
+      /* Intentional, for Impeccable's test drive: transition on a layout property. */
+      .meter span { display: block; height: 100%; width: 50%; border-radius: 0.5rem; background: var(--accent); transition: width 0.3s; }
+      .meter:hover span { width: 100%; }
+      /* Intentional, for Impeccable's test drive: body text flush with the viewport edges, no background. */
+      .edge { margin: 0; padding: 0; max-width: none; line-height: 1.6; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <span class="mark">Eyot</span>
+      <a href="/">Back to the board</a>
+    </header>
+    <section>
+      <h1>Reading the Eyot board</h1>
+      <p class="lede">Eyot lays the whole shared list out at a glance, so you can tell what is open and what is done in a few seconds.</p>
+      <table>
+        <thead>
+          <tr><th>Mark</th><th>Meaning</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>✓ Title</td><td>The item is finished.</td></tr>
+          <tr><td>Title</td><td>The item is still open.</td></tr>
+          <tr><td>The list is empty.</td><td>Nothing has been added yet.</td></tr>
+        </tbody>
+      </table>
+      <div class="meter" aria-hidden="true"><span></span></div>
+    </section>
+    <p class="edge">The board always shows the five newest items from the shared list, newest first, and refreshes every time the page is opened.</p>
+  </body>
+</html>
